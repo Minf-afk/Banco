@@ -17,3 +17,13 @@ else
 {
     Console.WriteLine("Usuário não reconhecido");
 }
+Console.WriteLine("Digite a senha do usuário: \n");
+int senhaUsuario = int.Parse(Console.ReadLine());
+if (senhaUsuario == Maria.senha)
+{
+    Console.WriteLine($"Usuário logado, saldo da conta: {Maria.saldo}");
+}
+else
+{
+    Console.WriteLine("Senha errado, favor tentar novamente;");
+}
