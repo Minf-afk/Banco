@@ -8,10 +8,10 @@ namespace Banco
 
     public class Carro
     {
-        public string Modelo;
-        public int Velocidade;
-        public string Tipo_combustivel;
-        public string Segurança;
+        public string modelo;
+        public int velocidade;
+        public string tipo_combustivel;
+        public string seguranca;
 
         public void InfoCarro()
         {
