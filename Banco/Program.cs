@@ -7,15 +7,15 @@ Maria.titular = "Maria de Jesus";
 Maria.saldo = 1542.23;
 Maria.senha = 123456;
 
-Console.WriteLine($"Digite por favor seu nome completo:  \n");
+Console.WriteLine($"Digite seu nome completo:  \n");
 string digitacaoTitular = Console.ReadLine();
-if (digitacaoTitular != Maria.titular)
+if (digitacaoTitular == Maria.titular)
 {
-    Console.WriteLine("Usuário autenticado devidamente ");
+    Console.WriteLine("Usuário autenticado devidamente \n");
 }
 else
 {
-    Console.WriteLine("Usuário não reconhecido");
+    Console.WriteLine("Usuário não reconhecido\n");
 }
 Console.WriteLine("Digite a senha do usuário: \n");
 int senhaUsuario = int.Parse(Console.ReadLine());
@@ -27,3 +27,6 @@ else
 {
     Console.WriteLine("Senha errado, favor tentar novamente;");
 }
+
+
+Maria.ExibirInformacoes();

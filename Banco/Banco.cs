@@ -10,5 +10,11 @@ namespace Banco
         public string titular;
         public double saldo;
         public int senha;
+
+        public void ExibirInformacoes()
+        {
+            Console.WriteLine($"A conta do(a) {titular} tem o saldo de {saldo}");
+            return;
+        }
     }
 }
