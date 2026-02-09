@@ -47,7 +47,14 @@ Produto Arroz = new Produto();
 
 Arroz.Nome = "Arroz Branco";
 Arroz.Marca = "Tio João";
-Arroz._preco = 15.85M;
+Arroz.Preco = 15.85M;
 Arroz.Estoque = 155;
 
 Console.WriteLine(Arroz.InfoProd);
+
+Produto produtos = new Produto();
+
+Console.WriteLine("Digite o produto que deseja adicionar ao estoque: ");
+produtos.Nome = Console.ReadLine();
+
+Console.WriteLine();
