@@ -4,18 +4,21 @@ using System.Text;
 
 namespace Banco
 {
-    public class ContaBanco
+    public class Titular
     {
-        public int Numero_indicador { get; set; }
-        public string Titular {  get; set; }
-        public double Saldo { get; set; }
-        public int Senha { get; set; }
-
-        public void ExibirInformacoes()
-        {
-            Console.WriteLine($"A conta do(a) {Titular} tem o saldo de {Saldo}");
-            return;
-        }
+            public string NomeCompleto {  get; set; }
+            public int Conta {  get; set; }
+            public int Agencia { get; set; }
+            public decimal Saldo { get; set; }
+            public decimal Limite { get; set; }
     }
+    public class Conta
+    {
+        public Titular Titular { get; set; }
+        public int Agencia { get; set; }
+        public int NumeroConta { get; set; }
+        public decimal Saldo { get; set; }
+        public decimal Limite { get; set; }
+
 }
     
