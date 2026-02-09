@@ -43,18 +43,31 @@
 //Fox.Acelerar();
 //Fox.Frear();
 
-Produto Arroz = new Produto();
+//Produto Arroz = new Produto();
 
-Arroz.Nome = "Arroz Branco";
-Arroz.Marca = "Tio João";
-Arroz.Preco = 15.85M;
-Arroz.Estoque = 155;
+//Arroz.Nome = "Arroz Branco";
+//Arroz.Marca = "Tio João";
+//Arroz.Preco = 15.85M;
+//Arroz.Estoque = 155;
 
-Console.WriteLine(Arroz.InfoProd);
+//Console.WriteLine(Arroz.InfoProd);
 
 Produto produtos = new Produto();
 
-Console.WriteLine("Digite o produto que deseja adicionar ao estoque: ");
+Console.WriteLine("Digite o produto que deseja adicionar ao estoque: \n");
 produtos.Nome = Console.ReadLine();
 
-Console.WriteLine();
+Console.WriteLine("Digite a marca do produto: \n");
+produtos.Marca = Console.ReadLine();
+
+Console.WriteLine("Digite o preço: \n");
+produtos.Preco = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Digite a quantidade em estoque: \n");
+produtos.Estoque = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Produto adicionado devidamente!");
+Thread.Sleep(4000);
+Console.Clear();
+
+Console.WriteLine(produtos.InfoProd);
