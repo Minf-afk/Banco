@@ -8,15 +8,11 @@ namespace Banco
 
     public class Carro
     {
-        public string modelo;
-        public int velocidade;
-        public string tipo_combustivel;
-        public string seguranca;
-
-        public void InfoCarro()
-        {
-            Console.WriteLine($"O carro {Modelo} tem velocidade máxima de {Velocidade} e tem o tipo de combustível {Tipo_combustivel} e possui o acessório de Segurança: {Segurança}\n");
-        }
+        public string Modelo { get; set; }
+        public int Velocidade { get; set; }
+        public string Tipo_combustivel { get; set; }
+        public string Seguranca { get; set; }
+        public string DescricaoDetalhada => $"Modelo do carro: {this.Modelo} atingindo a velocidade máxima de : {this.Velocidade} com o combustível: {this.Tipo_combustivel} e possuí o método de segurança {this.Seguranca}";
         public void Acelerar()
         {
             Console.WriteLine($"O {Modelo} tem velocidade máxima de {Velocidade}\n");

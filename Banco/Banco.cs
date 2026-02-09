@@ -6,14 +6,14 @@ namespace Banco
 {
     public class ContaBanco
     {
-        public int numero_indicador;
-        public string titular;
-        public double saldo;
-        public int senha;
+        public int Numero_indicador { get; set; }
+        public string Titular {  get; set; }
+        public double Saldo { get; set; }
+        public int Senha { get; set; }
 
         public void ExibirInformacoes()
         {
-            Console.WriteLine($"A conta do(a) {titular} tem o saldo de {saldo}");
+            Console.WriteLine($"A conta do(a) {Titular} tem o saldo de {Saldo}");
             return;
         }
     }
