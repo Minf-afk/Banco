@@ -19,6 +19,6 @@ namespace Banco
         public int NumeroConta { get; set; }
         public decimal Saldo { get; set; }
         public decimal Limite { get; set; }
-
+    }
 }
     
