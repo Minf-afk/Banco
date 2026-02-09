@@ -56,15 +56,19 @@ Produto produtos = new Produto();
 
 Console.WriteLine("Digite o produto que deseja adicionar ao estoque: \n");
 produtos.Nome = Console.ReadLine();
+Console.Clear();
 
 Console.WriteLine("Digite a marca do produto: \n");
 produtos.Marca = Console.ReadLine();
+Console.Clear();
 
 Console.WriteLine("Digite o preço: \n");
-produtos.Preco = int.Parse(Console.ReadLine());
+produtos.Preco = decimal.Parse(Console.ReadLine());
+Console.Clear();
 
 Console.WriteLine("Digite a quantidade em estoque: \n");
 produtos.Estoque = int.Parse(Console.ReadLine());
+Console.Clear();
 
 Console.WriteLine("Produto adicionado devidamente!");
 Thread.Sleep(4000);
