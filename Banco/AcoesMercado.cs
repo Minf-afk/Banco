@@ -25,19 +25,31 @@ namespace Banco
             Console.Clear();
 
             ListandoProd.Add(adicaoProduto);
+            Console.WriteLine("Produto adicionado com sucesso!");
             Console.Clear();
             Thread.Sleep(1000);
         }
 
         void ListarProdutos()
         {
-            
-            
+            int i = 1;
+            foreach (var item in ListandoProd)
+            {
+                if(ListandoProd.Count == 0)
+                {
+                    Console.WriteLine("Nenhum produto cadastrado !");
+                }
+                else
+                {
+                    Console.WriteLine($"{i}.Produto: {item.Produto} | Marca: {item.Marca} | Quantidade: {item.Quantidade} | Disponíveis: {item.DisponiveisEmEstoque}");    
+                }
+            }
+
         }
 
         void ExcluirProdutos()
         {
-
+                
         }
     }
 }
