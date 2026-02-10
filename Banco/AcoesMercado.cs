@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
 
 namespace Banco
 {
@@ -25,7 +26,7 @@ namespace Banco
             Console.Clear();
 
             ListandoProd.Add(adicaoProduto);
-            Console.WriteLine("Produto adicionado com sucesso!");
+            Console.WriteLine("Produto adicionado com sucesso!\n");
             Console.Clear();
             Thread.Sleep(1000);
         }
@@ -37,19 +38,35 @@ namespace Banco
             {
                 if(ListandoProd.Count == 0)
                 {
-                    Console.WriteLine("Nenhum produto cadastrado !");
+                    Console.WriteLine("Nenhum produto cadastrado !\n");
                 }
                 else
                 {
-                    Console.WriteLine($"{i}.Produto: {item.Produto} | Marca: {item.Marca} | Quantidade: {item.Quantidade} | Disponíveis: {item.DisponiveisEmEstoque}");    
+                    Console.WriteLine($"{i}.Produto: {item.Produto} | Marca: {item.Marca} | Quantidade: {item.Quantidade} | Disponíveis: {item.DisponiveisEmEstoque}\n");    
                 }
+                Console.Clear();
             }
 
         }
 
         void ExcluirProdutos()
         {
-                
+            ListarProdutos();
+
+            Console.WriteLine("Digite o número do produto que deseja excluir: \n");
+            int indice = int.Parse((Console.ReadLine() ?? "0"));
+
+            int posicao = indice - 1;
+            
+            if(posicao < 0)
+            {
+                Console.WriteLine("Indice Inválido!");
+                return;
+            }
+
+            ListandoProd.RemoveAt(posicao);
+            Console.WriteLine("Produto removido de acordo !");
+
         }
     }
 }
