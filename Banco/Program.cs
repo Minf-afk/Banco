@@ -76,6 +76,17 @@
 
 //Console.WriteLine(produtos.InfoProd);
 
-ContaBanco Bradesco = new ContaBanco();
+Titular Roberto = new Titular();    
+Conta Bradesco = new Conta();
 
- 
+Roberto.NomeCompleto = "Roberto da Silva Souza";
+Roberto.Cpf = 12345645612;
+Roberto.Rg = 551852351;
+
+Bradesco.Agencia = 1589;
+Bradesco.NumeroConta = 123456;
+Bradesco.Titular = Roberto;
+Bradesco.Saldo = 1251;
+Bradesco.Limite = 3500;
+
+Console.WriteLine(Bradesco.MostrarInfo);
