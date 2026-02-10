@@ -76,17 +76,50 @@
 
 //Console.WriteLine(produtos.InfoProd);
 
-Titular Roberto = new Titular();    
-Conta Bradesco = new Conta();
+//Titular Roberto = new Titular();    
+//Conta Bradesco = new Conta();
 
-Roberto.NomeCompleto = "Roberto da Silva Souza";
-Roberto.Cpf = 12345645612;
-Roberto.Rg = 551852351;
+//Roberto.NomeCompleto = "Roberto da Silva Souza";
+//Roberto.Cpf = 12345645612;
+//Roberto.Rg = 551852351;
 
-Bradesco.Agencia = 1589;
-Bradesco.NumeroConta = 123456;
-Bradesco.Titular = Roberto;
-Bradesco.Saldo = 1251;
-Bradesco.Limite = 3500;
+//Bradesco.Agencia = 1589;
+//Bradesco.NumeroConta = 123456;
+//Bradesco.Titular = Roberto;
+//Bradesco.Saldo = 1251;
+//Bradesco.Limite = 3500;
 
-Console.WriteLine(Bradesco.MostrarInfo);
+//Console.WriteLine(Bradesco.MostrarInfo);
+
+AcoesMercado acoes = new AcoesMercado();
+
+while (true)
+{
+    Console.Clear();
+    Console.WriteLine("Estoque do seu Zé!!\n");
+    Console.WriteLine("1 - Adicionar produto");
+    Console.WriteLine("2 - Listar produtos");
+    Console.WriteLine("3 - Excluir produto");
+    Console.WriteLine("0 - Sair");
+
+    int opcao = int.Parse(Console.ReadLine() ?? "0");
+
+    switch (opcao)
+    {
+        case 1:
+            acoes.AdicionarProduto();
+            break;
+        case 2:
+            acoes.ListarProdutos();
+            break;
+        case 3:
+            acoes.ExcluirProdutos();
+            break;
+        case 0:
+            return;
+        default:
+            Console.WriteLine("Opção inválida!");
+            Console.ReadLine();
+            break;
+    }
+}

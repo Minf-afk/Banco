@@ -7,12 +7,12 @@ namespace Banco
 {
     public class AcoesMercado
     {
-        Mercado adicaoProduto = new Mercado();
-
         private List<Mercado> ListandoProd = new List<Mercado>();
 
-        void AdicionarPorduto()
+        public void AdicionarProduto()
         {
+            Mercado adicaoProduto = new Mercado();
+
             Console.WriteLine("Digite o nome do produto que deseja adicionar ao sistema: \n");
             adicaoProduto.Produto = Console.ReadLine();
             Console.Clear();
@@ -31,25 +31,25 @@ namespace Banco
             Thread.Sleep(1000);
         }
 
-        void ListarProdutos()
+        public void ListarProdutos()
         {
+            if (ListandoProd.Count == 0)
+            {
+                Console.WriteLine("Nenhum produto cadastrado !\n");
+                Console.ReadLine();
+                return;
+            }
             int i = 1;
             foreach (var item in ListandoProd)
             {
-                if(ListandoProd.Count == 0)
-                {
-                    Console.WriteLine("Nenhum produto cadastrado !\n");
-                }
-                else
-                {
-                    Console.WriteLine($"{i}.Produto: {item.Produto} | Marca: {item.Marca} | Quantidade: {item.Quantidade} | Disponíveis: {item.DisponiveisEmEstoque}\n");    
-                }
-                Console.Clear();
+                Console.WriteLine($"{i}.Produto: {item.Produto} | Marca: {item.Marca} | Quantidade: {item.Quantidade} | Disponíveis: {item.DisponiveisEmEstoque}\n");
+                i ++;
             }
+            Console.ReadLine() ;
 
         }
 
-        void ExcluirProdutos()
+        public void ExcluirProdutos()
         {
             ListarProdutos();
 
