@@ -25,6 +25,8 @@ namespace Banco
             adicaoProduto.Quantidade = int.Parse(Console.ReadLine()  ?? "0");
             Console.Clear();
 
+            adicaoProduto.InicializarEstoque();
+
             ListandoProd.Add(adicaoProduto);
             Console.WriteLine("Produto adicionado com sucesso!\n");
             Console.Clear();
@@ -57,10 +59,11 @@ namespace Banco
             int indice = int.Parse((Console.ReadLine() ?? "0"));
 
             int posicao = indice - 1;
-            
-            if(posicao < 0)
+
+            if (posicao < 0 || posicao >= ListandoProd.Count)
             {
                 Console.WriteLine("Indice Inválido!");
+                Console.ReadLine();
                 return;
             }
 
